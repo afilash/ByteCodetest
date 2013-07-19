@@ -49,6 +49,14 @@ def caller():
     
     print "mem1.member :" ,mem1.member
     
+    array=[]
+    for i in range(12):
+        mem = MemberPackage()
+        array.append(mem)
+        mem.member = i*5
+    for each in array:
+        print each.member
+        
     #===========================================================================
     # Finished.
     #===========================================================================
