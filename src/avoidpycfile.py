@@ -49,6 +49,13 @@ def caller():
     
     print "mem1.member :" ,mem1.member
     
+    array=[]
+    for i in range(12):
+        elem = i*2
+        array.append(elem)        
+    for each in array:
+        print each.member
+            
     #===========================================================================
     # Finished.
     #===========================================================================
