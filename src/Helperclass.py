@@ -14,3 +14,18 @@ class ElementPackage():
         
     def setElements(self, elementid):
         self._Elements=elementid
+        
+        
+class MemberPackage():
+    
+    def __init__(self ):
+        self._member = None
+        
+    @property
+    def member(self):  
+        return self._member
+    
+    @member.setter
+    def member(self, value):
+        self._member = value
+        

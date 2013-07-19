@@ -6,9 +6,14 @@ Created on 16-Jul-2013
 import sys
 sys.dont_write_bytecode = True
 from Helperclass import ElementPackage
+from Helperclass import MemberPackage
 
 
 def caller():
+    #===========================================================================
+    # Failed method , this is not correct
+    #===========================================================================
+    
     #---------------------------------------------------------- primary instance
     elm = ElementPackage()          
     #------------------------------------------- setting instance variable to 78
@@ -27,7 +32,22 @@ def caller():
     #-------------------------------------- but this will retrive our orginal 78
     print "elm.get   :" , elm.getElements()                 
     #--------------------- printing this will give error, we ill not get 78 back
-    print "elm.Ele   :" , elm.Elements
+    #print "elm.Ele   :" , elm.Elements
+    
+    
+    
+    #===========================================================================
+    # Correct method
+    #===========================================================================
+    mem1 = MemberPackage()
+    mem1.member = 22
+    print "mem1.member :" ,mem1.member
+    
+    mem2 = MemberPackage()
+    mem2.member = 54
+    print "mem2.member :" ,mem2.member
+    
+    print "mem1.member :" ,mem1.member
 
 if __name__ == '__main__':
     caller()
