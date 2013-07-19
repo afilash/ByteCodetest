@@ -12,7 +12,10 @@ from Helperclass import ElementPackage
 def caller():
     elm = ElementPackage()
     elm.setElements(78)
-    print elm.Elements()
+    print elm.getElements()
+    
+    elm.Elements = 23
+    print elm.Elements
     
 
 if __name__ == '__main__':

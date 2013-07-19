@@ -9,7 +9,7 @@ class ElementPackage():
     def __init__(self ):
         self._Elements = None
     
-    def Elements(self):
+    def getElements(self):
         return self._Elements
         
     def setElements(self, elementid):
